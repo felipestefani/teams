@@ -1,18 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
 
 import Home from "./pages/home";
-import Login from "./pages/login";
+import Auth from "./pages/auth";
+import AuthProvider from "./contexts/AuthContext";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Auth />} />
+          <Route path="/home" element={<Home />} /> 
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   )
 }
 

@@ -1,9 +1,13 @@
+import footerCss from './styles.module.css'
 
 const Footer = () => {
     return (
-        <footer>
-            <h1>Isso é meu footer</h1>
-        </footer>
+        <div className={footerCss.div}>
+            <footer>
+                <p>Digital House | Todos os direitos reservados</p>
+            </footer>
+        </div>
+        
     )
 }
 

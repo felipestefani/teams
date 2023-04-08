@@ -1,0 +1,11 @@
+.div {
+    position: relative;
+}
+
+.div p {
+    width: 100vw;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 200;
+}

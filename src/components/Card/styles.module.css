@@ -1,0 +1,32 @@
+
+.div  {
+    width: 211px;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    border-radius: 12px;
+    background-color: #454545;
+    margin: 20px 10px;
+    position: relative;
+}
+
+.div FaExclamationCircle {
+    position: absolute;
+    right: 14px;
+    top:10px;
+}
+
+.div img{
+    width: 140px;
+    background-color: #454545;
+}
+
+.div h3{
+    color: #FFF;
+    background-color: #454545;
+    font-size: 24px;
+    font-weight: 400;
+}
