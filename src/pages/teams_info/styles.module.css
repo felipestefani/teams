@@ -1,0 +1,41 @@
+
+.Link {
+    text-decoration: none;
+    margin-left: 120px;
+    margin-bottom: 20px;
+}
+
+.div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 120px;
+    min-height: 61vh;
+}
+
+.imagem{
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+    min-width: 450px ;
+    background-color: #454545;
+}
+
+.img{
+    width: 300px;
+    background-color: #454545;
+}
+
+.h1, .p {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 400;
+    margin-left: 73px;
+}
+
+.p{
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 200;
+}

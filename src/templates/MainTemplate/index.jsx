@@ -2,7 +2,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import mainTemplateCss from './styles.module.css'
 
-const BaseTemplate = ({children}) => {
+const MainTemplate = ({children}) => {
     return (
         <div className={mainTemplateCss.div}>
             <Header />
@@ -12,4 +12,4 @@ const BaseTemplate = ({children}) => {
     )
 }
 
-export default BaseTemplate
+export default MainTemplate
