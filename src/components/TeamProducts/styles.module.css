@@ -1,0 +1,61 @@
+
+.container {
+    width: 305px;
+    height: 443px;
+    background-color: #454545;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border-radius: 12px;
+}
+
+.imagem{
+    margin-top: 10px;
+    background-color: #454545;
+    width: 305px;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    width: 179px;
+    background-color: #454545;
+}
+
+.precosDisponibilidade {
+    background-color: #454545;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 120px;
+}
+
+.nomeProduto, .precoComDesconto, .preco, .disponivel {
+    font-weight: 400;
+    font-size: 22px;
+    color: #FFF;
+    background-color: #454545;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nomeProduto {
+    min-height: 80px;
+}
+
+.precoComDesconto {
+    font-size: 18px;
+    text-decoration: line-through;
+}
+
+.preco, .disponivel {
+    font-size: 35px;
+}
+
+.container:hover {
+    cursor: pointer;
+}

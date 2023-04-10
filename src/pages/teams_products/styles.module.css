@@ -1,0 +1,30 @@
+.container {
+    margin: 0 120px;
+    min-height: 69vh;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.icone{
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+.ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nenhumProduto {
+    color: #fFF;
+    height: 400px;
+    width: 100%;
+    font-weight: 200;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    align-items: center;
+}

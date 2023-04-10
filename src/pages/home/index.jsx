@@ -1,15 +1,13 @@
 import api from '../../services/api'
-import MainTemplate from "../../templates/MainTemplate";
+import MainTemplate from "../../templates/main_template"
 import { useContext, useEffect, useState } from 'react';
-import Card  from "../../components/Card";
+import Card  from "../../components/TeamCard";
 import homeCss from './styles.module.css'
 import { Link, useNavigate } from "react-router-dom";
 import { TeamsContext } from '../../contexts/TeamsContext';
 
 const Home = () =>{
     const [teams, setTeams] = useState([])
-    // const { teamId, setTeamId } = useContext(TeamsContext)
-    // const navigate = useNavigate()
 
     async function getTeams() {
         try {
@@ -21,12 +19,6 @@ const Home = () =>{
         }
     }
 
-    // function teamInfo(id) {
-    //     setTeamId(id)
-    //     console.log(teamId);
-    //     navigate(`/team_info/${id}`)
-    // }
-
     useEffect(() => {
         getTeams()
     }, [])
@@ -35,10 +27,7 @@ const Home = () =>{
         <MainTemplate>
             <ul className={homeCss.ul}>
                 {teams.map((team) => (
-                    // <Link onClick={() => teamInfo(team._id)} style={{border: '1px solid red'}} >
-                        <Card key={team._id} team={team}/>          
-                    // {/* </Link> */}
-                    
+                        <Card  key={team._id} team={team} />          
                 ))}
             </ul>
         </MainTemplate>

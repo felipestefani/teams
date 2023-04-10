@@ -1,4 +1,4 @@
-import MainTemplate  from "../../templates/MainTemplate";
+import MainTemplate  from "../../templates/main_template";
 import api from "../../services/api";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";

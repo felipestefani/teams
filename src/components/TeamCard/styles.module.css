@@ -1,3 +1,15 @@
+.container{
+    width: 211px;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    border-radius: 12px;
+    margin: 20px 10px;
+    position: relative;
+}
 
 .div  {
     width: 211px;
@@ -9,14 +21,14 @@
     list-style: none;
     border-radius: 12px;
     background-color: #454545;
-    margin: 20px 10px;
     position: relative;
 }
 
-.div FaExclamationCircle {
+.info {
     position: absolute;
     right: 14px;
     top:10px;
+    z-index: 1;
 }
 
 .div img{
@@ -29,4 +41,8 @@
     background-color: #454545;
     font-size: 24px;
     font-weight: 400;
+}
+
+.container:hover {
+    cursor: pointer;
 }
