@@ -28,3 +28,11 @@
     margin-bottom: 50px;
     align-items: center;
 }
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 100%;
+}

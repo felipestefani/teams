@@ -6,6 +6,7 @@ const TeamsProvider = ({children}) => {
     
     const [teamId, setTeamId] = useState('')
     const [productId, setProductId] = useState('')
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         console.log(teamId);
@@ -13,7 +14,7 @@ const TeamsProvider = ({children}) => {
 
     return(
         <TeamsContext.Provider
-            value={{ teamId, setTeamId, productId, setProductId }}>
+            value={{ teamId, setTeamId, productId, setProductId, loading, setLoading }}>
             {children}
         </TeamsContext.Provider>
     )
