@@ -17,9 +17,10 @@ const Header = () => {
 
     function logout(e) {
         e.preventDefault()
-        deleteUserLocalData()
-        navigate('/')
-    }
+        if(confirm('Você deseja mesmo sair?')) {
+            deleteUserLocalData()
+            navigate('/')
+    }}
 
     return (
         <div className={headerCss.div}>

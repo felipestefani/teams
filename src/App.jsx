@@ -7,6 +7,7 @@ import AuthProvider from "./contexts/AuthContext";
 import TeamsProvider from "./contexts/TeamsContext";
 import TeamsProducts from "./pages/teams_products";
 import TeamsProductInfo from "./pages/teams_product_info";
+import NotFoundPage from "./pages/not_found";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/team_info/:id" element={<TeamsInfo />} />
             <Route path='/home/products/:id' element={<TeamsProducts />}  />
             <Route path="/home/products/details/:id" element={<TeamsProductInfo />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
         </TeamsProvider>  
