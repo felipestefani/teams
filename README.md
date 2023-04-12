@@ -2,10 +2,13 @@
 
 A project that works with API consumption of soccer teams.
 
-Built with:
-  1. react
-  2. react icon library
-  3. react toast library
+**Built with:**
+  - react
+  - axios
+  - external libraries
+    1. react icon
+    2. mui
+    3. react toastify
 
 ---
 
