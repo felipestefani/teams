@@ -1,11 +1,21 @@
+import { useContext } from 'react';
 import teamProdutsCardCss from './styles.module.css'
+import { useNavigate } from "react-router-dom";
+import { TeamsContext } from '../../contexts/TeamsContext';
 
 const TeamProductsCard = (props) => {
     const { product } = props
-    const { available, price, discountPrice, urlImage, name } = product
+    const { available, price, discountPrice, urlImage, name, _id } = product
+    const navigate = useNavigate()
+    const { setProductId } = useContext(TeamsContext)
+
+    function navegarDetalhesProdutos() {
+        setProductId(_id)
+        navigate(`/home/products/details/${_id}`)
+    }
 
     return(
-            <div className={teamProdutsCardCss.container}>
+            <div className={teamProdutsCardCss.container} onClick={() => navegarDetalhesProdutos()}>
                 <div className={teamProdutsCardCss.imagem}>
                     <img src={urlImage} alt={name} className={teamProdutsCardCss.img}/>
                 </div>
@@ -25,7 +35,6 @@ const TeamProductsCard = (props) => {
                             <span className={teamProdutsCardCss.preco}>R$ { price }</span>
                     </div> }
             </div>
-        
     )
 }
 

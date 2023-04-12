@@ -5,6 +5,7 @@ export const TeamsContext = createContext({})
 const TeamsProvider = ({children}) => {
     
     const [teamId, setTeamId] = useState('')
+    const [productId, setProductId] = useState('')
 
     useEffect(() => {
         console.log(teamId);
@@ -12,7 +13,7 @@ const TeamsProvider = ({children}) => {
 
     return(
         <TeamsContext.Provider
-            value={{ teamId, setTeamId }}>
+            value={{ teamId, setTeamId, productId, setProductId }}>
             {children}
         </TeamsContext.Provider>
     )

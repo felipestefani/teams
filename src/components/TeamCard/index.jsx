@@ -9,7 +9,7 @@ const Card = (props) => {
     const {team} = props
     const {name, image, _id} = team
     const navigate = useNavigate()
-    const { teamId, setTeamId } = useContext(TeamsContext)
+    const { setTeamId } = useContext(TeamsContext)
 
     function navegarProdutos() {
         setTeamId(_id)

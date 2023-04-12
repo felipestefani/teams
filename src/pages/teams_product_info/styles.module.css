@@ -1,0 +1,69 @@
+.Link{
+    text-decoration: none;
+    margin-left: 120px;
+}
+
+.div{
+    margin-left: 120px;
+    display: flex;
+}
+
+.imagem {
+    width: 576px;
+    height: 600px;
+    background-color: #454545;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.img {
+    width: 480px;
+    background-color: #454545;
+}
+
+.section {
+    margin: 20px 73px 0;
+    color: white;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+.maker{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.precosDisponibilidade{
+    display: flex;
+    flex-direction: column;
+    margin: 32px 0;
+}
+
+.precoComDesconto {
+    font-size: 26;
+    text-decoration: line-through;
+}
+
+.preco {
+    font-size: 40px;
+}
+
+.descricao{
+    margin-top: 70px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.p{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 200;
+}
+

@@ -6,6 +6,7 @@ import TeamsInfo from "./pages/teams_info";
 import AuthProvider from "./contexts/AuthContext";
 import TeamsProvider from "./contexts/TeamsContext";
 import TeamsProducts from "./pages/teams_products";
+import TeamsProductInfo from "./pages/teams_product_info";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/home" element={<Home />} /> 
             <Route path="/team_info/:id" element={<TeamsInfo />} />
             <Route path='/home/products/:id' element={<TeamsProducts />}  />
+            <Route path="/home/products/details/:id" element={<TeamsProductInfo />} />
           </Routes>
         </BrowserRouter>
         </TeamsProvider>  

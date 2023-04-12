@@ -3,14 +3,14 @@ import api from "../../services/api";
 import { useState, useContext, useEffect } from "react";
 import { TeamsContext } from "../../contexts/TeamsContext";
 import { BsArrowLeftCircle  } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TeamProductsCard from "../../components/TeamProducts";
 import teamsProductsCss from './styles.module.css'
 
 const TeamsProducts = () => {
 
     const [teamProducts, setTeamProducts] = useState([])
-    const { teamId } = useContext(TeamsContext)
+    const { teamId, setProductId } = useContext(TeamsContext)
 
     async function getTeamProducts() {
         const { data } = await api.get(`/products/${teamId}`, { headers: {
@@ -33,7 +33,7 @@ const TeamsProducts = () => {
                         <p className={teamsProductsCss.nenhumProduto}>Nenhum produto encontrado =(</p> 
                     :
                     (teamProducts.map((product)=>(
-                        <TeamProductsCard key={product._id} product={product} /> 
+                        <TeamProductsCard key={product._id} product={product}/> 
                     )))}
                 </ul>
             </div>         
