@@ -5,6 +5,8 @@ import Card  from "../../components/TeamCard";
 import homeCss from './styles.module.css'
 import CircularProgress from '@mui/material/CircularProgress';
 import { TeamsContext } from '../../contexts/TeamsContext';
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 const Home = () =>{
     const [teams, setTeams] = useState([])
@@ -17,7 +19,7 @@ const Home = () =>{
             {Authorization: localStorage.getItem('@teams_token')}})
             setTeams(data)
         } catch (error) {
-            console.log('Erro ao buscar os dados');
+            toast.error(`Erro ao fazer a requisição.` )
         } finally {
             setLoading(false)
         }
@@ -29,6 +31,7 @@ const Home = () =>{
 
     return (
         <MainTemplate>
+            <ToastContainer />
             {
                 loading ? <div className={homeCss.loading}>
                             <CircularProgress />

@@ -5,7 +5,8 @@ import { TeamsContext } from "../../contexts/TeamsContext";
 import { Link } from "react-router-dom";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import teamProductInfoCss from './styles.module.css'
-import CircularProgress from "@mui/material/CircularProgress";
+import CircularProgress from "@mui/material/CircularProgress";import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 const TeamsProductInfo = () => {
 
@@ -21,7 +22,7 @@ const TeamsProductInfo = () => {
         setTeamProductInfo({...data})
         console.log({...data});
         } catch (error) {
-            console.log(error);
+            toast.error('Erro ao realizar requisição de dados')
         } finally {
             setLoading(false)
         } 
@@ -33,6 +34,7 @@ const TeamsProductInfo = () => {
 
     return(
         <MainTemplate>
+            <ToastContainer />
             <Link to={`/home/products/${teamId}`}><BsArrowLeftCircle style={{color: '#FFF' }} size={'40px'} className={teamProductInfoCss.Link} /></Link>
             {
                 loading ? <div className={teamProductInfoCss.loading}>

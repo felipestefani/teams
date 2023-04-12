@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import TeamProductsCard from "../../components/TeamProducts";
 import teamsProductsCss from './styles.module.css'
 import CircularProgress from "@mui/material/CircularProgress";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 const TeamsProducts = () => {
 
@@ -21,7 +23,7 @@ const TeamsProducts = () => {
             }})
             setTeamProducts(data)
         } catch (error) {
-            console.log(error); 
+            toast.error('Erro ao realizar requisição de dados')
         } finally {
             setLoading(false)
         }       
@@ -35,6 +37,7 @@ const TeamsProducts = () => {
         <MainTemplate>
             <div className={teamsProductsCss.container}>
                 <Link to={`/home`} style={{textDecoration: 'none'}}><BsArrowLeftCircle size={'40px'} className={teamsProductsCss.icone}/></Link>
+                <ToastContainer />
                 {
                      loading ? <div className={teamsProductsCss.loading}>
                             <CircularProgress />

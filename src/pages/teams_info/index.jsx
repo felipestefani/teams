@@ -6,6 +6,8 @@ import { BsArrowLeftCircle } from "react-icons/bs";
 import teamInfoCss from './styles.module.css'
 import { TeamsContext } from "../../contexts/TeamsContext";
 import CircularProgress from '@mui/material/CircularProgress';
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 const TeamsInfo = () => {
     const { id } = useParams()
@@ -19,7 +21,7 @@ const TeamsInfo = () => {
                 Authorization: localStorage.getItem('@teams_token')}})
             setInfoTeam({...data.response})
         } catch (error) {
-           alert('Erro ao buscar dados') 
+           toast.error('Erro ao realizar requisição de dados')
         } finally {
             setLoading(false)
         }
@@ -31,6 +33,7 @@ const TeamsInfo = () => {
 
     return (
         <MainTemplate>
+            <ToastContainer />
             <Link to={`/home`}><BsArrowLeftCircle style={{color: '#FFF' }} size={'40px'} className={teamInfoCss.Link} /></Link>
             {
                 loading ? <div className={teamInfoCss.loading}>

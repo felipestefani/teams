@@ -14,3 +14,9 @@
     height: 60vh;
     width: 100%;
 }
+
+.toast {
+    background-color: none;
+    color: black;
+    font-size: 40px;
+}
