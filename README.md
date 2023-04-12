@@ -1,6 +1,11 @@
-# Teams
+# Teams webpage
 
-A project that works with API
+A project that works with API consumption of soccer teams.
+
+Built with:
+  1. react
+  2. react icon library
+  3. react toast library
 
 ---
 
